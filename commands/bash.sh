@@ -7,3 +7,7 @@ ssh -L A:127.0.0.1:B [USERNAME]@[SERVER]
 ssh -R B:127.0.0.1:A [USERNAME]@[SERVER]
 #Note that “A” and “B” refer to port numbers.
 # Reference Link: https://cloud.google.com/community/tutorials/ssh-port-forwarding-set-up-load-testing-on-compute-engine
+
+
+## Delete all merged branches into currently checked out branches:
+git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
